@@ -1,0 +1,26 @@
+# Ignore documentation output.
+**/docs/**/output/*
+
+# Ignore CMake build directory.
+build/
+
+# Ignore build artifacts
+*.o
+
+# Ignore code coverage artifacts
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore certificate files
+# *.pem
+# *.crt
+
+# Ignore vscode settings
+.vscode/
+
+# Ignore Esp settings
+sdkconfig
+sdkconfig.old
+managed_components
+dependencies.lock

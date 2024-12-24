@@ -1,0 +1,59 @@
+menu "Example Configuration"
+
+    orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config ESP_MAXIMUM_RETRY
+        int "Maximum retry"
+        default 2147483647
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really inexistent.
+
+    config BLINK_GPIO
+        int "Blink GPIO number"
+        default 8
+        help
+            GPIO number (IOxx) to blink on and off the LED.
+            Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+
+    choice BLINK_LED
+        prompt "Blink LED type"
+        default BLINK_LED_GPIO
+        help
+            Select the LED type. A normal level controlled LED or an addressable LED strip.
+            The default selection is based on the Espressif DevKit boards.
+            You can change the default selection according to your board.
+
+        config BLINK_LED_GPIO
+            bool "GPIO"
+        config BLINK_LED_STRIP
+            bool "LED strip"
+    endchoice
+
+    choice BLINK_LED_STRIP_BACKEND
+        depends on BLINK_LED_STRIP
+        prompt "LED strip backend peripheral"
+        default BLINK_LED_STRIP_BACKEND_RMT if SOC_RMT_SUPPORTED
+        default BLINK_LED_STRIP_BACKEND_SPI
+        help
+            Select the backend peripheral to drive the LED strip.
+
+        config BLINK_LED_STRIP_BACKEND_RMT
+            depends on SOC_RMT_SUPPORTED
+            bool "RMT"
+        config BLINK_LED_STRIP_BACKEND_SPI
+            bool "SPI"
+    endchoice
+
+endmenu
