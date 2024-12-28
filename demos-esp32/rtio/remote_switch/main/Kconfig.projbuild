@@ -14,6 +14,18 @@ menu "Example Configuration"
         help
             WiFi password (WPA or WPA2) for the example to use.
 
+    config RTIO_SERVICE_HOST
+        string "RTIO Service HOST"
+        default "demo.rtio.mkrainbow.com"
+        help
+            Set the RTIO HOST to connect to.
+
+    config RTIO_SERVICE_PORT
+        int "RTIO Service PORT"
+        default 17017
+        help
+            Set the RTIO PORT to connect to.
+
     config ESP_MAXIMUM_RETRY
         int "Maximum retry"
         default 2147483647

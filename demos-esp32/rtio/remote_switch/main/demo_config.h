@@ -30,8 +30,8 @@
 
 /*-----------------------------------------------------------*/
 
-#define SERVER_HOST "101.200.39.65"
-#define SERVER_PORT 17017
+#define SERVER_HOST CONFIG_RTIO_SERVICE_HOST
+#define SERVER_PORT CONFIG_RTIO_SERVICE_PORT
 
 #ifndef SERVER_HOST
     #error "Please define an RTIO server endpoint, SERVER_HOST, in demo_config.h."

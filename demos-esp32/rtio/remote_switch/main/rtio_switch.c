@@ -88,7 +88,7 @@ int demo_main()
     RTIODeviceInfo_t deviceInfo = { 0 };
 
 
-    LogInfo( ( "RTIO Demo start. @v001" ) );
+    LogInfo( ( "RTIO Demo start." ) );
 
     /* Configure the peripheral according to the LED type */
     configure_led();

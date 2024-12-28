@@ -21,8 +21,9 @@ IoT device SDK in C for RTIO service connectivity.
 Install build tools and demo dependencies on Debian-11, for example.
 
 ```sh
-apt install gcc g++ make cmake
-apt install openssl libssl-dev
+sudo apt updte
+sudo apt install gcc g++ make cmake
+sudo apt install openssl libssl-dev
 ```
 
 Compile the demo.
@@ -62,6 +63,8 @@ $ sudo docker run -it --rm --entrypoint /bin/sh  -p 17017:17017 -p 17917:17917 r
 Usage of ./rtio: 
 ...
 ```
+
+（Use "$" instead of "#" in code blocks to avoid the command being rendered as a comment. The same applies to the following text.）
 
 #### Running RTIO from Source
 

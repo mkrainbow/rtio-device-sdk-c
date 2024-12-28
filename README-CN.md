@@ -20,8 +20,9 @@ C语言版的物联网设备端SDK，用于连接RTIO服务。
 以Debian-11为例安装编译工具和Demo依赖库。
 
 ```sh
-apt install gcc g++ make cmake
-apt install openssl libssl-dev
+sudo apt updte
+sudo apt install gcc g++ make cmake
+sudo apt install openssl libssl-dev
 ```
 
 编译Demo。
@@ -61,6 +62,8 @@ $ sudo docker run -it --rm --entrypoint /bin/sh  -p 17017:17017 -p 17917:17917 r
 Usage of ./rtio: 
 ...
 ```
+
+（代码块中使用"$"代替"#",避免命令被渲染成注释，下文相同。）
 
 #### 编译源码运行RTIO
 
