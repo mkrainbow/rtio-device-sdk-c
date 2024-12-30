@@ -28,6 +28,7 @@ sudo apt install openssl libssl-dev
 编译Demo。
 
 ```sh
+$ git clone https://github.com/mkrainbow/rtio-device-sdk-c.git
 $ cd rtio-device-sdk-c/
 $ cmake -S . -B build
 $ cd build/
@@ -76,11 +77,9 @@ Usage of ./rtio:
 获取代码。
 
 ```sh
-$ git clone https://github.com/mkrainbow/rtio.git
-$ cd rtio/
-$ make
-$ ls ./out/
-examples  rtio
+git clone https://github.com/mkrainbow/rtio.git
+cd rtio
+make
 ```
 
 通过以下命令运行服务，可通过`./out/rtio -h`查看帮助。

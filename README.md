@@ -29,6 +29,7 @@ sudo apt install openssl libssl-dev
 Compile the demo.
 
 ```sh
+$ git clone https://github.com/mkrainbow/rtio-device-sdk-c.git
 $ cd rtio-device-sdk-c/
 $ cmake -S . -B build
 $ cd build/
@@ -77,11 +78,9 @@ Tools required:
 Get the code.
 
 ```sh
-$ git clone https://github.com/mkrainbow/rtio.git
-$ cd rtio/
-$ make
-$ ls ./out/
-examples  rtio
+git clone https://github.com/mkrainbow/rtio.git
+cd rtio
+make
 ```
 
 Run the service using the following command, and use `./out/rtio -h` for help.
