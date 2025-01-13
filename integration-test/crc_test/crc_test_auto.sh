@@ -1,6 +1,6 @@
 #!/bin/bash  
 
-# Copyright (c) 2023-2025 mkrainbow.com.
+# Copyright (c) 2024-2025 mkrainbow.com.
 #
 # Licensed under MIT.
 # See the LICENSE for detail or copy at https://opensource.org/license/MIT.
