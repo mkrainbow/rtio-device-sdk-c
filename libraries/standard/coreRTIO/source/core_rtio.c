@@ -1079,7 +1079,8 @@ static void incommingProccess( void* pContext )
 
     LogInfo( ( "Incomming proccess stopped with status=%d.",  status) );
 
-    if ( status != RTIOSuccess && 
+    if ( ( status != RTIOSuccess ) && 
+         ( false == ( (RTIOContext_t*)pContext )->serviceDone )&&
          ( (RTIOContext_t*)pContext )->serveFailedHandler != NULL )
     {
         ( (RTIOContext_t*)pContext )->serveFailedHandler();

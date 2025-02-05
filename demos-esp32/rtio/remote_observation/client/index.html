@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title> RTIO Demo </title>
+    <h2>RTIO Demo: Observing A GPIO </h2>
+</head>
+
+<body>
+    <div>
+        <label style="width: 100px; height: 50px;padding: 10px; margin: 5px;">Observe</label>
+        <button id="bt_on" class="bt_on" style="width: 100px; height: 50px;padding: 10px; margin: 5px;"> START </button>
+        <button id="bt_off" class="bt_off" style="width: 100px; height: 50px;padding: 10px; margin: 5px;"> STOP </button>
+        <p>
+            <label id="gpio_status" style="width: 100px; height: 50px;padding: 10px; margin: 5px;">The GPIO Status ➡️ ?</label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="log_area">Run log:<br /></label>
+            <textarea id="log_area" readonly style="min-height:380px;width: 96%;"></textarea>
+        </p>
+    </div>
+    <script type="text/javascript" src="api.js"></script>
+</body>
+</html>
